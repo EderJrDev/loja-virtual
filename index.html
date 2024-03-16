@@ -141,9 +141,58 @@
           <h2 class="uppercase tracking-widest text-2xl">women's clothing</h2>
         </div>
         <div
-          id="womens-clothing-container"
+          id="women-clothing-container"
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 justify-center gap-8"
-        ></div>
+        >
+          <!-- <div class="bg-white shadow rounded overflow-hidden group">
+            <div class="relative">
+              <img src="${product.image}" alt="product 1" class="w-96 h-96" />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition"
+              >
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="pt-4 pb-3 px-4">
+              <a href="#">
+                <h4
+                  class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition"
+                >
+                  ${product.title}
+                </h4>
+              </a>
+              <div class="flex items-baseline mb-1 space-x-2">
+                <p class="text-xl text-primary font-semibold">
+                  ${product.price}
+                </p>
+                <p class="text-sm text-gray-400 line-through">$55.90</p>
+              </div>
+              <div class="flex items-center">
+                <div class="flex gap-1 text-sm text-yellow-400">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="text-xs text-gray-500 ml-3">(150)</div>
+              </div>
+            </div>
+          </div> -->
+        </div>
         <div class="pt-10 text-center">
           <button
             class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
@@ -256,17 +305,136 @@
       </div>
     </section>
     <!-- end third section  -->
-    <!-- forth section  -->
-    <section class="">
+    <section class="bg-gray-200">
       <div class="px-20 py-10">
         <div class="text-center font-bold pb-8">
-          <h2 class="uppercase tracking-widest text-2xl">jewelery</h2>
+          <h2 class="uppercase tracking-widest text-2xl">Men's clothing</h2>
+        </div>
+
+        <div class="container mx-auto">
+          <div
+            id="men-clothing-container"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 p-3 gap-8 justify-center"
+          >
+            <!-- <div class="bg-white shadow rounded overflow-hidden group">
+            <div class="relative">
+              <img src="${product.image}" alt="product 1" class="w-96 h-96" />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition"
+              >
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="pt-4 pb-3 px-4">
+              <a href="#">
+                <h4
+                  class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition"
+                >
+                  ${product.title}
+                </h4>
+              </a>
+              <div class="flex items-baseline mb-1 space-x-2">
+                <p class="text-xl text-primary font-semibold">
+                  ${product.price}
+                </p>
+                <p class="text-sm text-gray-400 line-through">$55.90</p>
+              </div>
+              <div class="flex items-center">
+                <div class="flex gap-1 text-sm text-yellow-400">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="text-xs text-gray-500 ml-3">(150)</div>
+              </div>
+            </div>
+          </div> -->
+          </div>
+        </div>
+        <div class="pt-10 text-center">
+          <button
+            class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
+          >
+            View More
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- forth section  -->
+    <section class="bg-gray-200 relative">
+      <div class="px-20 py-10">
+        <div class="text-center font-bold pb-8">
+          <h2>J E W E L E R Y</h2>
         </div>
         <div class="text-center justify-between">
           <div
             id="jewelery-container"
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 justify-center gap-8"
-          ></div>
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 p-3 gap-8 justify-center"
+          >
+            <!-- <div class="bg-white shadow rounded overflow-hidden group">
+            <div class="relative">
+              <img src="${product.image}" alt="product 1" class="w-96 h-96" />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition"
+              >
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="pt-4 pb-3 px-4">
+              <a href="#">
+                <h4
+                  class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition"
+                >
+                  ${product.title}
+                </h4>
+              </a>
+              <div class="flex items-baseline mb-1 space-x-2">
+                <p class="text-xl text-primary font-semibold">
+                  ${product.price}
+                </p>
+                <p class="text-sm text-gray-400 line-through">$55.90</p>
+              </div>
+              <div class="flex items-center">
+                <div class="flex gap-1 text-sm text-yellow-400">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="text-xs text-gray-500 ml-3">(150)</div>
+              </div>
+            </div>
+          </div> -->
+          </div>
         </div>
         <div class="pt-10 text-center">
           <button
@@ -280,14 +448,14 @@
 
     <!-- end forth section  -->
 
-    <section>
-      <div class="px-20 py-20">
+    <section class="bg-gray-200 px-20 pb-10">
+      <div class="">
         <div
           class="pt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 text-center justify-center gap-8"
         >
           <div class="flex flex-col items-center">
             <div
-              class="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center"
+              class="rounded-full bg-white w-24 h-24 flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
             >
               <i class="fa-solid fa-shield-halved text-4xl"></i>
             </div>
@@ -295,7 +463,7 @@
           </div>
           <div class="flex flex-col items-center">
             <div
-              class="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center"
+              class="rounded-full bg-white w-24 h-24 flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
             >
               <i class="fa-solid fa-handshake-angle text-4xl"></i>
             </div>
@@ -303,7 +471,7 @@
           </div>
           <div class="flex flex-col items-center">
             <div
-              class="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center"
+              class="rounded-full bg-white w-24 h-24 flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
             >
               <i class="fa-solid fa-headset text-4xl"></i>
             </div>
@@ -313,45 +481,52 @@
       </div>
     </section>
 
-    <footer class="bg-white">
-      <div class="px-20 pb-20">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 text-center justify-center gap-8"
-        >
-          <div class="flex flex-col">
-            <p>Jewelery</p>
-            <p>Men's</p>
-            <p>Women's</p>
+    <footer class="px-20">
+      <div class="container px-4 py-8 mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <h4 class="text-lg font-semibold mb-4">Categories</h4>
+            <p class="mb-2">Jewelry</p>
+            <p class="mb-2">Men's</p>
+            <p class="mb-2">Women's</p>
           </div>
-          <div>
-            <p>
-              810, Bay Area, <br />
-              San Francisco, CA 94158
-            </p>
-            <p>
-              Email : <br />
-              info@NewBrand-shop.com
-            </p>
-
+          <div class="text-center">
+            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+            <p class="mb-2">810, Bay Area,<br />San Francisco, CA 94158</p>
+            <p class="mb-2">Email: info@NewBrand-shop.com</p>
             <p>Call: 1-100-000-0000</p>
           </div>
-          <div>
-            <p>
-              Shipping & Returns <br />
-              FAQ
+          <div class="text-center">
+            <h4 class="text-lg font-semibold mb-4">Helpful Links</h4>
+            <p class="mb-2">Shipping & Returns</p>
+            <p class="mb-2">FAQ</p>
+            <p>Follow us: Twitter Facebook Instagram</p>
+          </div>
+          <div class="text-center">
+            <h4 class="text-lg font-semibold mb-4">Stay Updated</h4>
+            <p class="mb-2">Receive all our news and updates</p>
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center mb-2"
+            >
+              <input
+                class="border border-gray-400 px-4 py-2 mb-2 sm:mb-0 sm:mr-2 rounded"
+                type="text"
+                placeholder="Email address"
+              />
+              <button class="bg-gray-800 text-white px-6 py-2 rounded">
+                Subscribe
+              </button>
+            </div>
+            <p class="text-sm text-gray-600">
+              Subscribe to get notified about exclusive offers and latest
+              arrivals.
             </p>
-
-            <p>Twitter Facebook Instagram</p>
           </div>
-          <div class="flex flex-col gap-1">
-            <p class="font-medium">Receice all our news and updates</p>
-            <input
-              class="border border-black p-2"
-              type="text"
-              placeholder="Email address"
-            />
-            <button class="p-3 bg-gray-100">Subscribe Now</button>
-          </div>
+        </div>
+        <div class="text-center mt-8">
+          <p class="text-gray-600 text-sm">
+            © 2024 NewBrand. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
@@ -359,6 +534,7 @@
     <script type="module" src="/main.js"></script>
     <script type="module" src="/js/fetch-jewelery.js"></script>
     <script type="module" src="/js/fetch-women's-clothing.js"></script>
+    <script type="module" src="/js/fetch-men's-clothing.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

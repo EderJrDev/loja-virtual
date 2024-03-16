@@ -2,7 +2,10 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  mode: 'jit',
+  purge: [
+    "./index.html",
   ],
   theme: {
     extend: {

@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $.ajax({
-    url: `https://fakestoreapi.com/products/category/women's%20clothing`,
+    url: `https://fakestoreapi.com/products/category/men's%20clothing`,
     method: 'GET',
     dataType: 'json',
     success: function (data) {
@@ -57,8 +57,8 @@ $(document).ready(function () {
         </div>
       </div>
         `;
-        $('#women-clothing-container').append(productHTML);
-
+        $('#men-clothing-container').append(productHTML);
+       
       });
     },
     error: function (xhr, status, error) {
