@@ -36,7 +36,9 @@
       class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg"
     >
       <div>
-        <span class="p-6 font-medium text-2xl">N E W B R A N D</span>
+        <span class="p-6 font-medium text-2xl uppercase tracking-widest"
+          >NewBrand</span
+        >
       </div>
 
       <svg
@@ -60,16 +62,26 @@
           class="pt-4 text-base font-medium text-gray-700 md:flex md:justify-between md:pt-0"
         >
           <li>
-            <a class="md:p-4 py-2 block hover:text-gray-400" href="#"
-              >Jewelery</a
+            <a
+              class="md:p-4 py-2 block hover:text-gray-400 smooth-scroll"
+              href="#women-clothing-container"
+              >Women's</a
             >
           </li>
+
           <li>
-            <a class="md:p-4 py-2 block hover:text-gray-400" href="#">Men's</a>
+            <a
+              class="md:p-4 py-2 block hover:text-gray-400 smooth-scroll"
+              href="#men-clothing-container"
+              >Men's</a
+            >
           </li>
+
           <li>
-            <a class="md:p-4 py-2 block hover:text-gray-400" href="#"
-              >Women's</a
+            <a
+              class="md:p-4 py-2 block hover:text-gray-400 smooth-scroll"
+              href="#jewelery"
+              >Jewelery</a
             >
           </li>
           <li>
@@ -106,7 +118,7 @@
             <div class="swiper-slide">
               <img
                 class="block h-[100%] w-[100%] object-cover"
-                src="/public/assets/modelo-3.avif"
+                src="/public/assets/modelo-2.avif"
                 alt="model"
               />
             </div>
@@ -209,28 +221,65 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 text-center justify-center items-center gap-8"
         >
-          <div class="w-64 mx-auto md:w-full">
+          <div class="shadow overflow-hidden group w-64 mx-auto md:w-full">
             <!-- aspect: manter a proporção da imagem -->
             <div
-              class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
+              class="relative w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
             >
               <img
                 src="./public/assets/japonesa.jpg"
                 alt=""
                 class="object-cover w-full h-full"
               />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition"
+              >
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="w-64 mx-auto md:w-full">
+          <div class="shadow overflow-hidden group w-64 mx-auto md:w-full">
+            <!-- aspect: manter a proporção da imagem -->
             <div
-              class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
+              class="relative w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
             >
               <img
                 src="./public/assets/onça.png"
                 alt=""
                 class="object-cover w-full h-full"
               />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition"
+              >
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -250,7 +299,7 @@
                 </div>
               </div>
               <div
-                class="absolute inset-0 flex flex-col justify-center items-center z-10"
+                class="absolute inset-0 flex flex-col justify-center items-center z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
               >
                 <div class="text-center">
                   <h1 class="text-2xl text-white font-bold">
@@ -272,7 +321,7 @@
                 </div>
               </div>
               <div
-                class="absolute inset-0 flex flex-col justify-center items-center z-10"
+                class="absolute inset-0 flex flex-col justify-center items-center z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
               >
                 <div class="text-center">
                   <h1 class="text-2xl text-white font-bold">Accessories</h1>
@@ -287,13 +336,13 @@
                 <div class="w-72 mx-auto md:w-full">
                   <img
                     class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
-                    src="./public/assets/men.avif"
+                    src="./public/assets/modelo-4.avif"
                     alt=""
                   />
                 </div>
               </div>
               <div
-                class="absolute inset-0 flex flex-col justify-center items-center z-10"
+                class="absolute inset-0 flex flex-col justify-center items-center z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
               >
                 <div class="text-center">
                   <h1 class="text-2xl text-white font-bold">Men's clothing</h1>
@@ -376,14 +425,21 @@
       </div>
     </section>
     <!-- forth section  -->
-    <section class="bg-gray-200 relative">
+    <section class="bg-gray-200 relative jewelery">
       <div class="px-20 py-10">
         <div class="text-center font-bold pb-8">
           <h2>J E W E L E R Y</h2>
         </div>
+        <div
+          id="jewelery-container"
+          class="grid grid-cols-2 md:grid-cols-3 gap-4"
+        >
+          <!-- <div>
+              <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+          </div> -->
+        </div>
         <div class="text-center justify-between">
           <div
-            id="jewelery-container"
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 p-3 gap-8 justify-center"
           >
             <!-- <div class="bg-white shadow rounded overflow-hidden group">
@@ -538,6 +594,26 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var smoothScrollLinks = document.querySelectorAll(".smooth-scroll");
+
+        smoothScrollLinks.forEach(function (smoothScrollLink) {
+          smoothScrollLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            var targetId = this.getAttribute("href").substring(1);
+            var targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth", // This makes the scrolling smooth
+              });
+            }
+          });
+        });
+      });
+    </script>
 
     <!-- Initialize Swiper -->
     <script>

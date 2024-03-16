@@ -9,9 +9,9 @@ $(document).ready(function () {
         <div class="bg-white shadow rounded overflow-hidden group">
         <div class="relative">
           <img
+            class="w-96 h-96 rounded object-fill"
             src="${product.image}"
-            alt="product 1"
-            class="w-96 h-96"
+            alt="${product.title}"
           />
           <div
             class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition"
@@ -58,7 +58,7 @@ $(document).ready(function () {
       </div>
         `;
         $('#men-clothing-container').append(productHTML);
-       
+
       });
     },
     error: function (xhr, status, error) {
