@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <!-- fontAwesome icons  -->
     <link
@@ -11,20 +12,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loja Virtual</title>
-  </head>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <style>
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-  </style>
+    <title>Loja Virtual</title>
+
+    <!-- Demo styles -->
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+    </style>
+  </head>
 
   <body>
     <!-- navbar  -->
     <nav
-      class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-black"
+      class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg"
     >
       <div>
         <span class="p-6 font-medium text-2xl">N E W B R A N D</span>
@@ -51,29 +60,24 @@
           class="pt-4 text-base font-medium text-gray-700 md:flex md:justify-between md:pt-0"
         >
           <li>
-            <a class="md:p-4 py-2 block hover:text-blue-400" href="#">Home</a>
+            <a class="md:p-4 py-2 block hover:text-gray-400" href="#"
+              >Jewelery</a
+            >
           </li>
           <li>
-            <a class="md:p-4 py-2 block hover:text-blue-400" href="#">Store</a>
+            <a class="md:p-4 py-2 block hover:text-gray-400" href="#">Men's</a>
           </li>
           <li>
-            <a class="md:p-4 py-2 block hover:text-blue-400" href="#">About</a>
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-blue-400" href="#">Blog</a>
-          </li>
-          <li>
-            <a
-              class="md:p-4 py-2 block hover:text-blue-400 text-blue-500"
-              href="#"
-              >Point of Sale</a
+            <a class="md:p-4 py-2 block hover:text-gray-400" href="#"
+              >Women's</a
             >
           </li>
           <li>
             <a
-              class="md:p-4 py-2 block hover:text-blue-400 text-blue-500"
+              class="md:p-4 py-2 block hover:text-gray-400 text-gray-500"
               href="#"
-              >Point of Sale <i class="fa-solid fa-cart-shopping"></i
+            >
+              <i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
         </ul>
@@ -82,43 +86,64 @@
     <!-- end navbar  -->
     <!-- first section  -->
     <section>
-      <div class="p-20">
-        <div class="bg-gray-200 py-48 text-center">
-          <h1 class="text-4xl font-extrabold">New Clothing Collection</h1>
-          <div class="pt-10">
-            <button
-              class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
+      <div class="pb-10 relative">
+        <div class="swiper mySwiper h-[100%] w-[100%] inset-0 brightness-50">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex text-center justify-center text-xl">
+              <img
+                class="block h-[100%] w-[100%] object-cover"
+                src="/public/assets/modelo-1.avif"
+                alt="model"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="block h-[100%] w-[100%] object-cover"
+                src="/public/assets/modelo-2.jpg"
+                alt="model"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="block h-[100%] w-[100%] object-cover"
+                src="/public/assets/modelo-3.avif"
+                alt="model"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center z-10"
+        >
+          <div class="py-16 text-center">
+            <h1
+              class="text-4xl sm:text-2xl sm:font-bold text-white font-extrabold"
             >
-              Shop Now
-            </button>
+              New Clothing Collection
+            </h1>
+            <div class="pt-10">
+              <button
+                class="px-8 py-2 bg-transparent font-bold text-white border-2 border-white rounded-full"
+              >
+                Shop Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- end first section  -->
     <!-- secound section  -->
-    <section class="bg-gray-200">
+    <section class="">
       <div class="px-20 py-10">
         <div class="text-center font-bold pb-8">
-          <h2>NEW ARRIVALS</h2>
+          <h2 class="uppercase tracking-widest text-2xl">women's clothing</h2>
         </div>
-        <div class="flex flex-row text-center justify-around">
-          <div class="bg-white border p-1">
-            <div class="bg-gray-300 h-56 w-56"></div>
-            <p>Product name</p>
-            <p>R$ 150.00</p>
-          </div>
-          <div class="bg-white border p-1">
-            <div class="bg-gray-300 h-56 w-56"></div>
-            <p>Product name</p>
-            <p>R$ 150.00</p>
-          </div>
-          <div class="bg-white border p-1">
-            <div class="bg-gray-300 h-56 w-56"></div>
-            <p>Product name</p>
-            <p>R$ 150.00</p>
-          </div>
-        </div>
+        <div
+          id="womens-clothing-container"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 justify-center gap-8"
+        ></div>
         <div class="pt-10 text-center">
           <button
             class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
@@ -131,64 +156,221 @@
     <!-- end secound section  -->
     <!-- third section  -->
     <section class="">
-      <div class="px-20 py-10">
-        <div class="text-center font-bold pb-8">
-          <h2>NEW ARRIVALS</h2>
+      <div class="px-20 py-20">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 text-center justify-center items-center gap-8"
+        >
+          <div class="w-64 mx-auto md:w-full">
+            <!-- aspect: manter a proporção da imagem -->
+            <div
+              class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
+            >
+              <img
+                src="./public/assets/japonesa.jpg"
+                alt=""
+                class="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
+          <div class="w-64 mx-auto md:w-full">
+            <div
+              class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
+            >
+              <img
+                src="./public/assets/onça.png"
+                alt=""
+                class="object-cover w-full h-full"
+              />
+            </div>
+          </div>
         </div>
-        <div class="flex flex-row text-center justify-evenly">
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 text-center justify-center items-center pt-10 gap-8"
+        >
           <div class="">
-            <div class="bg-gray-300 h-96 w-96"></div>
+            <div class="relative">
+              <div class="inset-0 brightness-50">
+                <div class="w-72 mx-auto md:w-full">
+                  <img
+                    class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
+                    src="./public/assets/modelo-6.avif"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center z-10"
+              >
+                <div class="text-center">
+                  <h1 class="text-2xl text-white font-bold">
+                    Women's clothing
+                  </h1>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="">
-            <div class="bg-gray-300 h-96 w-96"></div>
+            <div class="relative">
+              <div class="inset-0 brightness-50">
+                <div class="w-72 mx-auto md:w-full">
+                  <img
+                    class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
+                    src="./public/assets/joia.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center z-10"
+              >
+                <div class="text-center">
+                  <h1 class="text-2xl text-white font-bold">Accessories</h1>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="py-16 flex flex-row text-center justify-evenly">
-        <div class="">
-          <div class="bg-gray-300 h-48 w-72"></div>
-        </div>
-        <div class="">
-          <div class="bg-gray-300 h-48 w-72"></div>
-        </div>
-        <div class="">
-          <div class="bg-gray-300 h-48 w-72"></div>
+
+          <div class="">
+            <div class="relative">
+              <div class="inset-0 brightness-50">
+                <div class="w-72 mx-auto md:w-full">
+                  <img
+                    class="w-full aspect-w-3 aspect-h-4 md:aspect-w-4 md:aspect-h-3"
+                    src="./public/assets/men.avif"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center z-10"
+              >
+                <div class="text-center">
+                  <h1 class="text-2xl text-white font-bold">Men's clothing</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- end third section  -->
     <!-- forth section  -->
-    <div class="bg-gray-200 px-20 py-10">
-      <div class="text-center font-bold pb-8">
-        <h2>NEW ARRIVALS</h2>
-      </div>
-      <div class="flex flex-row text-center justify-around">
-        <div class="bg-white border p-1">
-          <div class="bg-gray-300 h-56 w-56"></div>
-          <p>Product name</p>
-          <p>R$ 150.00</p>
+    <section class="">
+      <div class="px-20 py-10">
+        <div class="text-center font-bold pb-8">
+          <h2 class="uppercase tracking-widest text-2xl">jewelery</h2>
         </div>
-        <div class="bg-white border p-1">
-          <div class="bg-gray-300 h-56 w-56"></div>
-          <p>Product name</p>
-          <p>R$ 150.00</p>
+        <div class="text-center justify-between">
+          <div
+            id="jewelery-container"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 justify-center gap-8"
+          ></div>
         </div>
-        <div class="bg-white border p-1">
-          <div class="bg-gray-300 h-56 w-56"></div>
-          <p>Product name</p>
-          <p>R$ 150.00</p>
+        <div class="pt-10 text-center">
+          <button
+            class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
+          >
+            View More
+          </button>
         </div>
       </div>
-      <div class="pt-10 text-center">
-        <button
-          class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
-        >
-          View More
-        </button>
-      </div>
-    </div>
+    </section>
+
     <!-- end forth section  -->
 
+    <section>
+      <div class="px-20 py-20">
+        <div
+          class="pt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 text-center justify-center gap-8"
+        >
+          <div class="flex flex-col items-center">
+            <div
+              class="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-shield-halved text-4xl"></i>
+            </div>
+            <p class="text-2xl font-medium pt-3">Secured Payments</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-handshake-angle text-4xl"></i>
+            </div>
+            <p class="text-2xl font-medium pt-3">Free shipping and Returns</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-headset text-4xl"></i>
+            </div>
+            <p class="text-2xl font-medium pt-3">24/7 Customer Service</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white">
+      <div class="px-20 pb-20">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 text-center justify-center gap-8"
+        >
+          <div class="flex flex-col">
+            <p>Jewelery</p>
+            <p>Men's</p>
+            <p>Women's</p>
+          </div>
+          <div>
+            <p>
+              810, Bay Area, <br />
+              San Francisco, CA 94158
+            </p>
+            <p>
+              Email : <br />
+              info@NewBrand-shop.com
+            </p>
+
+            <p>Call: 1-100-000-0000</p>
+          </div>
+          <div>
+            <p>
+              Shipping & Returns <br />
+              FAQ
+            </p>
+
+            <p>Twitter Facebook Instagram</p>
+          </div>
+          <div class="flex flex-col gap-1">
+            <p class="font-medium">Receice all our news and updates</p>
+            <input
+              class="border border-black p-2"
+              type="text"
+              placeholder="Email address"
+            />
+            <button class="p-3 bg-gray-100">Subscribe Now</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/js/fetch-jewelery.js"></script>
+    <script type="module" src="/js/fetch-women's-clothing.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
   </body>
 </html>
