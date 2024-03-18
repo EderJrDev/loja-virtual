@@ -1,9 +1,9 @@
 # Teste de Desenvolvimento: Página Inicial de Loja Virtual
 
 <img
-  src="/src/img/quiz.svg"
-  alt="react"
-  title="React"
+  src="/public/assets/layout.webp"
+  alt="layout"
+  title="Layout"
   style="display: inline-block; margin: 0 auto; max-width: 500px">
 
 🚀 **Description**
