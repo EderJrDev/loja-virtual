@@ -6,59 +6,49 @@ $(document).ready(function () {
     success: function (data) {
       data.forEach(function (product) {
         var productHTML = `          
-        <div class="bg-white shadow rounded overflow-hidden group">
-        <div class="relative">
-          <img
-            class="w-96 h-96 rounded object-fill"
-            src="${product.image}"
-            alt="${product.title}"
-          />
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition"
-          >
-            <a
-              href="#"
-              class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-              title="view product"
-            >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a
-              href="#"
-              class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-              title="add to wishlist"
-            >
-              <i class="fa-solid fa-heart"></i>
-            </a>
-          </div>
-        </div>
-        <div class="pt-4 pb-3 px-4">
-          <a href="#">
-            <h4
-              class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition"
-            >
-              ${product.title}
-            </h4>
-          </a>
-          <div class="flex items-baseline mb-1 space-x-2">
-            <p class="text-xl text-primary font-semibold">${product.price}</p>
-            <p class="text-sm text-gray-400 line-through">$55.90</p>
-          </div>
-          <div class="flex items-center">
-            <div class="flex gap-1 text-sm text-yellow-400">
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
+        <div class="relative flex w-full flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+        <a class="relative m-auto text-center items-center justify-center max-w-[100%] max-h-[100%] mx-3 mt-3 flex overflow-hidden rounded-xl" href="#">
+            <div class="h-48 w-48"> 
+                <img class="object-cover h-full w-full" src="${product.image}" alt="product image" />
             </div>
-            <div class="text-xs text-gray-500 ml-3">(150)</div>
+            <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span>
+        </a>
+        <div class="mt-4 px-5 pb-5">
+          <a href="#">
+            <h5 class="text-xl tracking-tight text-slate-900">${product.title}</h5>
+          </a>
+          <div class="mt-2 mb-5 flex items-center justify-between">
+            <p>
+              <span class="text-3xl font-bold text-slate-900">${product.price}</span>
+              <span class="text-sm text-slate-900 line-through">$699</span>
+            </p>
+            <div class="flex items-center">
+              <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <span class="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
+            </div>
           </div>
         </div>
-      </div>
+    </div>
         `;
         $('#jewelery-container').append(productHTML);
       });
+
+      // Adicionando a classe 'product-image' para todas as imagens após elas serem inseridas no DOM
+      // $('.product-image').addClass('resize-image');
     },
     error: function (xhr, status, error) {
       console.error('Error:', error);
