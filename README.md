@@ -22,6 +22,18 @@ solução
 - Swiper
 - Figma
 
+## 🚀 Starting the project with git
+
+1. Type the following commands in the terminal:
+
+   **To install dependencies and to run the project, you can use these commands:**
+   ```shell
+   git clone https://github.com/EderJrDev/loja-virtual.git
+   cd loja-virtual
+   npm install
+   npm run dev
+
+
 # 🤝 Contributions
 Contributions are always welcome! Feel free to submit pull requests or open issues.
 
