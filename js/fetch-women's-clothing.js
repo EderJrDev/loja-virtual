@@ -8,29 +8,27 @@ $(document).ready(function () {
         var productHTML = `          
         <div class="relative flex w-full flex-col overflow-hidden group rounded-lg border border-gray-100 bg-white shadow-md">
           <div class="relative h-48 w-48 m-auto text-center items-center justify-center max-w-[100%] max-h-[100%] mx-3 mt-3 flex overflow-hidden rounded-xl">        
-              <img class="object-cover h-full w-full" src="${product.image}" alt="product image" />       
+            <img class="object-cover h-full w-full" src="${product.image}" alt="product image" />       
             <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
-              <a
-                href="#"
+              <div
                 class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
                 title="view product"
               >
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
-              <a
-                href="#"
+              </div>
+              <div
                 class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
                 title="add to wishlist"
               >
                 <i class="fa-solid fa-heart"></i>
-              </a>
-          </div>
+              </div>
+            </div>
             <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span>
           </div>
           <div class="mt-4 px-5 pb-5">
-            <a href="#">
+            <div>
               <h5 class="text-xl tracking-tight text-slate-900">${product.title}</h5>
-            </a>
+            </div>
             <div class="mt-2 mb-5 flex items-center justify-between">
               <p>
                 <span class="text-3xl font-bold text-slate-900">${product.price}</span>
