@@ -27,13 +27,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- swiper js  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <title>Loja Virtual</title>
 
     <!-- js  -->
     <script type="module" src="/main.js"></script>
@@ -41,11 +47,27 @@
     <script type="module" src="/js/fetch-women's-clothing.js"></script>
     <script type="module" src="/js/fetch-men's-clothing.js"></script>
 
+    <title>Loja Virtual</title>
     <!-- styles -->
     <style>
       @tailwind base;
       @tailwind components;
       @tailwind utilities;
+
+      /* CSS Scroll Bars */
+
+      *::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      *::-webkit-scrollbar-track {
+        border-radius: 5px;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+      }
 
       #menu-toggle:checked + #menu {
         display: block; /* close menu in mobile view */
@@ -139,43 +161,42 @@
     <!-- end navbar  -->
     <!-- banner section  -->
     <section class="relative">
-      <div class="swiper mySwiper h-[100%] w-[100%] inset-0 brightness-50">
+      <div
+        class="swiper swiper-container h-[100%] w-[100%] inset-0 brightness-50"
+      >
         <div class="swiper-wrapper">
-          <div class="swiper-slide flex text-center justify-center text-xl">
-            <!-- mobile  -->
+          <div class="swiper-slide">
             <img
-              class="block h-full w-full object-fill md:hidden"
+              class="block h-full w-full object-cover md:hidden"
               src="/public/assets/man-alone.webp"
               alt="man-alone"
             />
             <img
-              class="h-[100%] w-[100%] object-cover md:block hidden"
+              class="h-full w-full object-cover md:block hidden"
               src="/public/assets/woman-model-sunglasses.webp"
               alt="woman-model-sunglasses"
             />
           </div>
           <div class="swiper-slide">
-            <!-- mobile  view -->
             <img
-              class="block h-[100%] w-[100%] object-cover md:hidden"
+              class="block h-full w-full object-cover md:hidden"
               src="/public/assets/woman-alone.webp"
               alt="woman-alone"
             />
             <img
-              class="h-[100%] w-[100%] object-cover md:block hidden"
+              class="h-full w-full object-cover md:block hidden"
               src="/public/assets/woman-sweatshirt.webp"
               alt="woman-sweatshirt"
             />
           </div>
           <div class="swiper-slide">
-            <!-- mobile  -->
             <img
-              class="block h-[100%] w-[100%] object-cover md:hidden"
+              class="block h-full w-full object-cover md:hidden"
               src="/public/assets/woman-smiling.webp"
               alt="woman-smiling"
             />
             <img
-              class="h-[100%] w-[100%] object-cover md:block hidden"
+              class="h-full w-full object-cover md:block hidden"
               src="/public/assets/man-model.webp"
               alt="man-model"
             />
@@ -183,6 +204,7 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
+
       <div
         class="absolute inset-0 flex flex-col justify-center items-center bg-transparent z-10"
       >
@@ -204,16 +226,16 @@
     </section>
     <!-- end banner section  -->
     <!-- women section  -->
-    <section id="women-clothing" class="md:p-10 bg-gray-100">
+    <section id="women-clothing" class="md:p-10 bg-gray-100 overflow-hidden">
       <div class="text-center p-8">
         <h2 class="uppercase font-bold tracking-widest text-2xl">
           women's clothing
         </h2>
       </div>
-      <div
-        id="women-clothing-container"
-        class="grid grid-cols-1 p-2 md:grid-cols-4 lg:grid-cols-4 gap-4"
-      ></div>
+      <div class="swiper-clothing h-full">
+        <div class="swiper-wrapper h-full" id="women-clothing-container"></div>
+        <div class="swiper-pagination"></div>
+      </div>
       <div class="p-10 text-center">
         <button
           class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
@@ -359,18 +381,17 @@
     </section>
     <!-- end  grid photos section  -->
     <!-- men section  -->
-    <section id="men-clothing" class="md:p-10 bg-gray-100">
+    <section id="men-clothing" class="md:p-10 bg-gray-100 overflow-hidden">
       <div class="text-center p-8">
         <h2 class="uppercase font-bold tracking-widest text-2xl">
-          man's clothing
+          men's clothing
         </h2>
       </div>
-      <div
-        id="man-clothing-container"
-        class="grid grid-cols-1 md:grid-cols-4 p-2 gap-4"
-      ></div>
-
-      <div class="pt-10 text-center">
+      <div class="swiper-clothing h-full">
+        <div class="swiper-wrapper h-full" id="men-clothing-container"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="p-10 text-center">
         <button
           class="px-8 py-2 bg-transparent font-bold text-black border-2 border-black rounded-full"
         >
@@ -449,49 +470,16 @@
     </section>
     <!-- end  grid photos section  -->
     <!-- jewelery section  -->
-    <section id="jewelery" class="md:p-10 bg-gray-100">
-      <div class="text-center pb-8">
+    <section
+      id="jewelery-container"
+      class="md:p-10 bg-gray-100 overflow-hidden"
+    >
+      <div class="text-center p-8">
         <h2 class="uppercase font-bold tracking-widest text-2xl">jewelery</h2>
       </div>
-      <div
-        id="jewelery-container"
-        class="grid grid-cols-1 md:grid-cols-4 p-2 gap-4"
-      >
-        <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-          <a class="relative text-center items-center mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
-            <img class="object-cover" src="${product.image}" alt="product image" />
-            <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span>
-          </a>
-          <div class="mt-4 px-5 pb-5">
-            <a href="#">
-              <h5 class="text-xl tracking-tight text-slate-900">${product.title}</h5>
-            </a>
-            <div class="mt-2 mb-5 flex items-center justify-between">
-              <p>
-                <span class="text-3xl font-bold text-slate-900">${product.price}</span>
-                <span class="text-sm text-slate-900 line-through">$699</span>
-              </p>
-              <div class="flex items-center">
-                <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <span class="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
-              </div>
-            </div>
-          </div>
-        </div> -->
+      <div class="swiper-clothing h-full">
+        <div class="swiper-wrapper h-full" id="jewelery"></div>
+        <div class="swiper-pagination"></div>
       </div>
       <div class="p-10 text-center">
         <button

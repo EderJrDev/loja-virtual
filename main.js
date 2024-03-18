@@ -17,10 +17,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//  Initialize Swiper 
-var swiper = new Swiper(".mySwiper", {
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
+// swiper banner 
+
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".swiper-container", {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+});
+
+// swiper clothing 
+
+var swiperClothing = new Swiper('.swiper-clothing', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
   },
 });
